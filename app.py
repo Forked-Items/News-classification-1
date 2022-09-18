@@ -177,8 +177,6 @@ def predict():
     nb.train(x_train,y_train)
 
 
-
-
     if request.method == 'POST':
 	    message = request.form['message']
 	    data = [message]
@@ -189,7 +187,7 @@ def predict():
 
     if(my_prediction[0]==1):
         return render_template('sports.html',prediction = my_prediction,data=data[0], acc=acc)
-    if(my_prediction[0]==2):
+    if(my_prediction[0]==2 or my_prediction[0]==4):
         return render_template('politics.html',prediction = my_prediction,data=data[0], acc=acc)
     if(my_prediction[0]==3):
         return render_template('tv.html',prediction = my_prediction,data=data[0], acc=acc)
