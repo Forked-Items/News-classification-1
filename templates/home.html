@@ -133,46 +133,36 @@ background: linear-gradient(to left, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Fi
 
 			
 		}
-		.category h2 li{
-
-			
+		.category h2 li{			
 			float: left;
 			position: relative;
 			left: 100px;
 			margin: 5px;
 			width: 20%;
 			height: 120px;
-			font-size: 80px;
-			overflow: hidden;
-
-
-			
-			
-
+			font-size: 30px;
+			overflow: hidden;			
 		}
-		.category h2 .lower{
 
-		
+		.category h2 .lower{
 			float: left;
 			position: relative;
 			left: 250px;
 			margin: 5px;
 			width: 18%;
 			height: 120px;
-
 		}
-		.sports{ color: white;background-image: url("static/sports.jpg") ;  background-size: cover; opacity: 1; transition: 1s;} 
+		/* .sports{ color: white;background-image: url("static/sports.jpg") ;  background-size: cover; opacity: 1; transition: 1s;} 
 		.business{color: white;background-image: url("static/business.jpg");  background-size: cover;opacity: 1}
 		.health{background-image: url("static/sciences1.png");  background-size: cover;opacity: 1}
 		.politics{background-image: url("static/pol.jpg"); background-size: cover;opacity: 1}
 		.entertainment{color: white;background-image: url("static/tv.jpg"); background-size: cover;opacity: 1}
 		.tech{color: white;background-image: url("static/tech.jpeg");  background-size: cover;opacity: 1}
-		.intern{color:white;background-image: url("static/int.jpg"); background-size: cover;opacity: 1}
+		.intern{color:white;background-image: url("static/int.jpg"); background-size: cover;opacity: 1} */
 
 		.sports:hover,.business:hover,.health:hover,.politics:hover,.tech:hover,.intern:hover,.entertainment:hover{
 			opacity: 1;
-			transform: scale(1.1);
-			
+			transform: scale(1.1);			
 		}
 		
 
@@ -193,11 +183,14 @@ background: linear-gradient(to left, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Fi
 		<form action="{{ url_for('predict')}}" method="POST">
 			<!-- <h2>Enter the news headline to predict the category...</h2> -->
 
-			<input type="text" name="message" rows="4" cols="50" placeholder="Enter The News Headline.."></input>
+			<input type="text" name="message" rows="4" cols="50" placeholder="Enter The News Headline.."  style="width: 90vw;">
+
+			<br>
+			<br>
 			
 
 			<input class="searchbutton" type="submit" class="btn-info" value="Predict" align="center">
-			<h2 class="header2"> Avaialable Categories to predict:</h2>
+			<!-- <h2 class="header2"> Avaialable Categories to predict:</h2>
 			<ul class="category"> 
 				<h2>
 					<li class="sports">Sports</li>
@@ -209,7 +202,7 @@ background: linear-gradient(to left, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Fi
 					<li class="lower health">Health and Sciences</li>
 				
 				</h2>
-			</ul>
+			</ul> -->
 		</form>
 
 	</div>
